@@ -2,6 +2,6 @@
   height: 100vh;
   background-image: url("./assets/Circle.svg");
   background-repeat: no-repeat;
-  background-color: #F5F5F5;
   padding: 0 25px;
+  max-width: 390px;
 }
