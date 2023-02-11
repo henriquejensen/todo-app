@@ -9,11 +9,11 @@ import Todo from './pages/Todo';
 function App() {
   return (
     <main className={ styles.container }>
-      {/* <GetStarted /> */}
+      <GetStarted />
       {/* <Onboard /> */}
       {/* <Login /> */}
       {/* <Welcome /> */}
-      <Todo />
+      {/* <Todo /> */}
     </main>
   );
 }
