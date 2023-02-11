@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Banner from '../components/Banner';
 import Button from '../components/Button';
 import Form from '../components/Form';
@@ -25,7 +26,9 @@ function Login() {
         <Button type="submit">Sign In</Button>
       </Form>
 
-      <Text text="Dont have an account ? Sign Up" />
+      <Link to="/onboard">
+        <Text text="Dont have an account ? Sign Up" />
+      </Link>
     </section>
   );
 }

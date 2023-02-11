@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import GetStartedBanner from '../assets/GetStartedBanner.svg';
 import Banner from '../components/Banner';
 import Button from '../components/Button';
@@ -7,6 +8,12 @@ import Title from '../components/Title';
 import styles from './GetStarted.module.css';
 
 function GetStarted() {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/login');
+  };
+
   return (
     <section className={ styles.container }>
       <Banner image={ GetStartedBanner } alt="homem sentado na cadeira" />
@@ -17,7 +24,9 @@ function GetStarted() {
         odit expedita saepe iste ut natus, harum atque rerum voluptatibus
         explicabo."
       />
-      <Button>Get Started</Button>
+      <Button onClick={ handleClick }>
+        Get Started
+      </Button>
     </section>
   );
 }

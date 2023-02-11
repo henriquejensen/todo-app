@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Button from '../components/Button';
 import Form from '../components/Form';
 import Input from '../components/Input';
@@ -22,7 +23,10 @@ function Onboard() {
         <Button type="submit">Sign Up</Button>
       </Form>
 
-      <Text text="Already have an account ? Sign In" />
+      <Link to="/login">
+        <Text text="Already have an account ? Sign In" />
+      </Link>
+
     </section>
   );
 }
