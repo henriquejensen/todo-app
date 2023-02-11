@@ -4,6 +4,7 @@ import styles from './App.module.css';
 import Onboard from './pages/Onboard';
 import Login from './pages/Login';
 import Welcome from './pages/Welcome';
+import Todo from './pages/Todo';
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       {/* <GetStarted /> */}
       {/* <Onboard /> */}
       {/* <Login /> */}
-      <Welcome />
+      {/* <Welcome /> */}
+      <Todo />
     </main>
   );
 }
