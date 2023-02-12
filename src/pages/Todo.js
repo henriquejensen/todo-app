@@ -1,15 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Banner from '../components/Banner';
 import Button from '../components/Button';
 import Input from '../components/Input';
 import Title from '../components/Title';
 import styles from './Todo.module.css';
 import TodoBanner from '../assets/TodoBanner.svg';
+import Context from '../context/Context';
 
 function Todo() {
+  const { user } = useContext(Context);
+
   return (
     <section className={ styles.container }>
-      <Title title="Welcome Jensen" />
+      <Title title={ `Welcome ${user}` } />
 
       <Banner image={ TodoBanner } />
 

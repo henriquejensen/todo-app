@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import React, { useState, useContext } from 'react';
+import { Link } from 'react-router-dom';
 import Banner from '../components/Banner';
 import Button from '../components/Button';
 import Form from '../components/Form';
@@ -9,13 +9,14 @@ import Text from '../components/Text';
 import Title from '../components/Title';
 import styles from './Login.module.css';
 import LoginBanner from '../assets/LoginBanner.svg';
+import Context from '../context/Context';
 
 const SIX = 6;
 
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const navigate = useNavigate();
+  const { onLogin } = useContext(Context);
 
   const handleChange = ({ target }) => {
     if (target.name === 'password') {
@@ -28,7 +29,7 @@ function Login() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    navigate('/welcome');
+    onLogin(email);
   };
 
   const disabled = !email || password.length < SIX;
