@@ -1,16 +1,17 @@
-import { render, screen } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 import GetStarted from '../pages/GetStarted';
+import { renderWithRouter } from './helpers/renderWithRouter';
 
 describe('Teste da GetStarted', () => {
   test('Se o título esta na página', () => {
-    render(<GetStarted />);
+    renderWithRouter(<GetStarted />);
 
     const title = screen.getByText('Get things done with TODo');
     expect(title).toBeInTheDocument();
   });
 
   test('Se existe um texto', () => {
-    render(<GetStarted />);
+    renderWithRouter(<GetStarted />);
 
     const title = screen.getByText(/Lorem ipsum/);
     expect(title).toBeInTheDocument();

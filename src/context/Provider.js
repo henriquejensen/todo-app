@@ -4,6 +4,7 @@ import Context from './Context';
 
 function Provider({ children }) {
   const [user, setUser] = useState('');
+  const [todos, setTodos] = useState([]);
   const navigate = useNavigate();
 
   const onLogin = useCallback((email) => {
@@ -15,7 +16,9 @@ function Provider({ children }) {
   const value = useMemo(() => ({
     user,
     onLogin,
-  }), [user, onLogin]);
+    todos,
+    setTodos,
+  }), [user, onLogin, todos]);
 
   return (
     <Context.Provider value={ value }>
