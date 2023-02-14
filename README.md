@@ -11,7 +11,3 @@
 - React Router
 - Testes com Jest e RTL (React Testing Library)
 - Consumindo API com fetch (GET e POST)
-
-## Código final
-
-[Branch](https://github.com/tryber/todo-app/tree/c%C3%B3digo-final)
