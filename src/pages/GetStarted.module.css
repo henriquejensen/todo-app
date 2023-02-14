@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container > h1 {
+  margin-top: 20px;
+}
+
+.container > p {
+  margin: 30px 0px 56px 0px;
+}

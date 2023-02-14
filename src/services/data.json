@@ -1,0 +1,9 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "value": "estudar react",
+      "checked": false
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container > h1 {
+  margin-bottom: 20px;
+}
+
+.container button {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
